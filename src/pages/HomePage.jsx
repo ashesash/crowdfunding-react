@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { allProjects } from '../data';
 import ProjectCard from '../components/ProjectCard';
+import { Link } from 'react-router-dom';
 
 const HomePage = () => {
     const [projectList, setProjectList] = useState([]);
@@ -12,10 +13,10 @@ const HomePage = () => {
             .then((results) => {
                 return results.json();
             })
-            .then ((data) => {
+            .then((data) => {
                 setProjectList(data)
             });
-            // "then" overwrites async functions
+        // "then" overwrites async functions
     }, []);
 
     return (
@@ -24,6 +25,9 @@ const HomePage = () => {
                 // return <div key={key}>{projectData.title}</div>;
                 return <ProjectCard keyyyy={keey} projectData={projectData} />
             })}
+            <Link to={`/createProject`}>
+                Create Project
+            </Link>
         </div>
     );
 };

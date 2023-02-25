@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom"
 import Nav from "./components/Nav"
 import Home from "./pages/HomePage"
 import LoginPage from "./pages/LoginPage"
+import ProjectCreate from "./pages/ProjectCreate"
 import Project from "./pages/ProjectPage"
 
 const HeaderLayout = () => {
@@ -30,7 +31,11 @@ const router = createBrowserRouter([
         path: '/login',
         element: <LoginPage />
       },
-      
+      {
+        path: '/createProject',
+        element: <ProjectCreate />
+      },
+
     ]
   }
 ])

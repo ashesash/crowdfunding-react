@@ -5,6 +5,7 @@ import Home from "./pages/HomePage"
 import LoginPage from "./pages/LoginPage"
 import ProjectCreate from "./pages/ProjectCreate"
 import Project from "./pages/ProjectPage"
+import LogoutPage from "./pages/LogoutPage"
 
 const HeaderLayout = () => {
   return (
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: '/createProject',
         element: <ProjectCreate />
+      },
+      {
+        path: '/logout',
+        element: <LogoutPage />
       },
 
     ]

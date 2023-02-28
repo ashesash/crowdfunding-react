@@ -28,7 +28,7 @@ const ProjectForm = () => {
             [id]: value
         }));
     };
-    console.log(FormData)
+    // console.log(FormData)
     const navigate = useNavigate();
 
     const handleSubmit = (event) => {

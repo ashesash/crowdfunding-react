@@ -20,16 +20,31 @@ const HomePage = () => {
     }, []);
 
     return (
-        <div>
-            {projectList.map((projectData, keey) => {
-                // return <div key={key}>{projectData.title}</div>;
-                return <ProjectCard keyyyy={keey} projectData={projectData} />
-            })}
+        //     <div>
+        //         {projectList.map((projectData, keey) => {
+        //             // return <div key={key}>{projectData.title}</div>;
+        //             return <ProjectCard keyyyy={keey} projectData={projectData} />
+        //         })}
+
+        //     </div>
+        <main className="container">
             <Link to={`/createProject`}>
                 Create Project
             </Link>
-        </div>
+            <section className="featured-projects">
+                <div id="project-list" className="project-row">
+                    {projectList.map((projectData, index) => {
+                        return <ProjectCard
+                            projectData={projectData}
+                            key={projectData.id} />
+                    })}
+                </div>
+            </section>
+        </main>
     );
+
+
 };
+
 
 export default HomePage;
